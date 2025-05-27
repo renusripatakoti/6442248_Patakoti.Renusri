@@ -45,7 +45,7 @@ Key Folder:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/Anjali-27066/Cognizant Digital Nurture 4.0 JAVA FSE Upskilling learning program.git
+   git clonehttps://github.com/renusripatakoti/6442248_Patakoti.Renusri
 Open relevant folders in your preferred IDE or code editor.
 
 Use any local server (e.g., Live Server in VS Code) for HTML/CSS/JS files.
