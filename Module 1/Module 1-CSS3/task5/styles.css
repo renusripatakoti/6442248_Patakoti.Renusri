@@ -1,0 +1,46 @@
+/* ===========================
+   Typography Styling
+   =========================== */
+
+/* Global font from Google Fonts */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Heading */
+#mainHeader {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  background-color: #0044cc;
+  color: white;
+}
+
+/* Section Title */
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+  margin-top: 30px;
+}
+
+/* Event Description Paragraph */
+.eventDescription {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  margin: 20px auto;
+  width: 80%;
+  color: #555;
+}

@@ -1,0 +1,70 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Header */
+#mainHeader {
+  background-color: #0044cc;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Event Section */
+.event {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.event img {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 🎯 MEDIA QUERY FOR DEBUGGING TASK */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack nav links */
+    align-items: center;
+  }
+
+  .event img {
+    width: 90%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}

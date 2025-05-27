@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Registration Form</title>
+  <style>
+    form {
+      max-width: 400px;
+      margin: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #aaa;
+    }
+    .error {
+      color: red;
+      font-size: 0.85em;
+      margin-top: -8px;
+      margin-bottom: 8px;
+    }
+    .success {
+      color: green;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Registration</h1>
+
+  <form id="regForm" novalidate>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+    <div class="error" id="nameError"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+    <div class="error" id="emailError"></div>
+
+    <label for="eventSelect">Select Event:</label>
+    <select id="eventSelect" name="eventSelect">
+      <option value="">--Choose an event--</option>
+      <option value="Tech Talk">Tech Talk</option>
+      <option value="Music Jam">Music Jam</option>
+      <option value="Art Expo">Art Expo</option>
+    </select>
+    <div class="error" id="eventError"></div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

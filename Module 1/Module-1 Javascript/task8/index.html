@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Event Portal</title>
+  <style>
+    .card {
+      border: 1px solid #aaa;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      max-width: 300px;
+    }
+    input, select {
+      margin: 10px 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Handling Demo</h1>
+
+  <input type="text" id="searchBox" placeholder="Search by event name...">
+  <select id="categoryFilter">
+    <option value="All">All Categories</option>
+    <option value="Music">Music</option>
+    <option value="Tech">Tech</option>
+    <option value="Art">Art</option>
+  </select>
+
+  <div id="eventContainer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

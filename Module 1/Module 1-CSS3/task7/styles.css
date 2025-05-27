@@ -1,0 +1,27 @@
+/* ===========================
+   Event Admin Table Styling
+   =========================== */
+
+.eventTable {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.eventTable th,
+.eventTable td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  background-color: #fdfdfd;
+}
+
+.eventTable th {
+  background-color: #0044cc;
+  color: white;
+}
+
+.eventTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

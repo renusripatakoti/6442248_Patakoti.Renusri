@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Find Nearby Events</title>
+<style>
+  #output {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  #error {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<h2>Locate Nearest Event</h2>
+
+<button id="find-events-btn">Find Nearby Events</button>
+
+<div id="output"></div>
+<div id="error"></div>
+
+<script>
+  const button = document.getElementById('find-events-btn');
+  const output = document.getElementById('output');
+  const errorDiv = document.getElementById('error');
+
+  button.addEventListener('click', () => {
+    output.textContent = "Getting your location...";
+    errorDiv.textContent = "";
+
+    if (!navigator.geolocation) {
+      errorDiv.textContent = "Geolocation is not supported by your browser.";
+      return;
+    }
+
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 10000,        // 10 seconds timeout
+      maximumAge: 0
+    };
+
+    navigator.geolocation.getCurrentPosition(success, error, options);
+  });
+
+  function success(position) {
+    const latitude = position.coords.latitude.toFixed(6);
+    const longitude = position.coords.longitude.toFixed(6);
+    output.textContent = `Your Coordinates:\nLatitude: ${latitude}, Longitude: ${longitude}`;
+
+    // Here you could add logic to find & display nearest events based on these coords
+  }
+
+  function error(err) {
+    switch(err.code) {
+      case err.PERMISSION_DENIED:
+        errorDiv.textContent = "Permission denied. Please allow location access.";
+        break;
+      case err.POSITION_UNAVAILABLE:
+        errorDiv.textContent = "Location information is unavailable.";
+        break;
+      case err.TIMEOUT:
+        errorDiv.textContent = "Location request timed out. Try again.";
+        break;
+      default:
+        errorDiv.textContent = "An unknown error occurred.";
+        break;
+    }
+    output.textContent = "";
+  }
+</script>
+
+</body>
+</html>

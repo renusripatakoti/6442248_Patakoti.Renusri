@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Event Feedback - Local Community Event Portal</title>
+<style>
+  #event-image {
+    width: 200px;
+    transition: width 0.3s ease;
+    cursor: pointer;
+  }
+  #event-image.enlarged {
+    width: 400px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Event Feedback Form</h2>
+
+<form id="feedback-form">
+  <label for="phone">Phone Number:</label><br />
+  <input type="text" id="phone" name="phone" placeholder="Enter 10-digit phone" onblur="validatePhone()" /><br />
+  <small id="phone-error" style="color:red;"></small><br /><br />
+
+  <label for="event-select">Select Event:</label><br />
+  <select id="event-select" onchange="displayFee()">
+    <option value="" disabled selected>Choose event</option>
+    <option value="free">Community Meetup (Free)</option>
+    <option value="10">Yoga Workshop ($10)</option>
+    <option value="15">Cooking Class ($15)</option>
+  </select><br /><br />
+
+  <div id="event-fee" style="font-weight:bold;"></div><br />
+
+  <label for="feedback">Your Feedback:</label><br />
+  <textarea id="feedback" rows="4" cols="50" placeholder="Type your feedback here..." onkeyup="countChars()"></textarea><br />
+  <small>Characters typed: <span id="char-count">0</span></small><br /><br />
+
+  <button type="button" onclick="submitForm()">Submit Feedback</button>
+</form>
+
+<br />
+<img
+  id="event-image"
+  src="https://via.placeholder.com/200x120.png?text=Event+Image"
+  alt="Event"
+  ondblclick="enlargeImage()"
+/>
+
+<script>
+  function validatePhone() {
+    const phoneInput = document.getElementById('phone');
+    const errorMsg = document.getElementById('phone-error');
+    const phone = phoneInput.value.trim();
+    const phoneRegex = /^\d{10}$/;
+
+    if (!phoneRegex.test(phone)) {
+      errorMsg.textContent = 'Please enter a valid 10-digit phone number.';
+    } else {
+      errorMsg.textContent = '';
+    }
+  }
+
+  function displayFee() {
+    const select = document.getElementById('event-select');
+    const feeDisplay = document.getElementById('event-fee');
+    const selectedValue = select.value;
+
+    if (selectedValue === "free") {
+      feeDisplay.textContent = "This event is free.";
+    } else if (selectedValue) {
+      feeDisplay.textContent = `Event Fee: $${selectedValue}`;
+    } else {
+      feeDisplay.textContent = "";
+    }
+  }
+
+  function submitForm() {
+    // Simple confirmation on submit button click
+    alert('Thank you! Your feedback has been submitted.');
+  }
+
+  function enlargeImage() {
+    const img = document.getElementById('event-image');
+    img.classList.toggle('enlarged');
+  }
+
+  function countChars() {
+    const textarea = document.getElementById('feedback');
+    const countSpan = document.getElementById('char-count');
+    countSpan.textContent = textarea.value.length;
+  }
+</script>
+
+</body>
+</html>

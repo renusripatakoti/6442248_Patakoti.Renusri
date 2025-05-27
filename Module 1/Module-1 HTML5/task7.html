@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Event Promo Video</title>
+<style>
+  #status-message {
+    font-weight: bold;
+    margin-top: 10px;
+    color: green;
+  }
+</style>
+</head>
+<body>
+
+<h2>Event Promo Video</h2>
+
+<video id="promo-video" width="480" controls oncanplay="videoReady()">
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<div id="status-message"></div>
+
+<form id="registration-form">
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" /><br /><br />
+
+  <label for="email">Email:</label><br />
+  <input type="email" id="email" name="email" /><br /><br />
+
+  <button type="submit">Register</button>
+</form>
+
+<script>
+  function videoReady() {
+    document.getElementById('status-message').textContent = "Video ready to play";
+  }
+
+  // Warn user if trying to leave page without submitting the form
+  window.onbeforeunload = function(event) {
+    const form = document.getElementById('registration-form');
+    const nameFilled = form.name.value.trim() !== '';
+    const emailFilled = form.email.value.trim() !== '';
+
+    // If form fields are partially filled, warn user
+    if (nameFilled || emailFilled) {
+      const message = "You have unsaved changes. Are you sure you want to leave?";
+      event.returnValue = message; // For most browsers
+      return message; // For some older browsers
+    }
+    // Otherwise no warning
+    return undefined;
+  };
+
+  // Optional: Prevent warning if form is submitted normally
+  document.getElementById('registration-form').addEventListener('submit', function() {
+    window.onbeforeunload = null;
+  });
+</script>
+
+</body>
+</html>

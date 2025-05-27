@@ -1,0 +1,10 @@
+// Import Bootstrap functions first
+@import "node_modules/bootstrap/scss/functions";
+
+// Override Bootstrap variables here
+$primary: #ff5733;      // Custom primary color (orange-red)
+$border-radius: 1.5rem; // Larger rounded corners
+
+// Import Bootstrap variables and Bootstrap styles
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,5 @@
+[
+  { "name": "Tech Talk", "category": "Tech", "seats": 10 },
+  { "name": "Music Jam", "category": "Music", "seats": 0 },
+  { "name": "Art Expo", "category": "Art", "seats": 5 }
+]

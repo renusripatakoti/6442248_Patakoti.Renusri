@@ -1,0 +1,47 @@
+<!-- task5-grid-alignment-reorder.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Grid Alignment and Reordering</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .box {
+      background-color: #e9ecef;
+      border: 1px solid #adb5bd;
+      padding: 20px;
+      text-align: center;
+    }
+    .vh-50 {
+      height: 50vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-4">
+
+    <!-- Exercise 5.1: Centering -->
+    <h2 class="text-center mb-4">Exercise 5.1: Centered Content</h2>
+    <div class="row vh-50 justify-content-center align-items-center border">
+      <div class="col-6 box">
+        This content is centered horizontally and vertically!
+      </div>
+    </div>
+
+    <!-- Exercise 5.2: Reordering -->
+    <h2 class="text-center mt-5 mb-4">Exercise 5.2: Column Reordering</h2>
+    <div class="row">
+      <div class="col-md-6 order-md-2 box bg-warning">
+        Column 1 (order-md-2)
+      </div>
+      <div class="col-md-6 order-md-1 box bg-info">
+        Column 2 (order-md-1)
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

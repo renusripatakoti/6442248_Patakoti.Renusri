@@ -1,0 +1,47 @@
+/* ===========================
+   Body Styling with Fallback and Image
+   =========================== */
+body {
+  background-color: #f0f0f0; /* Fallback color */
+  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  color: #222;
+}
+
+/* ===========================
+   Header Styling with HEX
+   =========================== */
+#mainHeader {
+  background-color: #0044cc; /* HEX Color */
+  color: #ffffff; /* White text */
+  text-align: center;
+  padding: 20px;
+  font-size: 36px;
+}
+
+/* ===========================
+   Gradient Heading
+   =========================== */
+.gradient-heading {
+  font-size: 28px;
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+}
+
+/* ===========================
+   Event Card with RGBA Background
+   =========================== */
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

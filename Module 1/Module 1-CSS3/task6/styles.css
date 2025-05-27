@@ -1,0 +1,56 @@
+/* ===========================
+   Navigation Menu Styling
+   =========================== */
+.navMenu {
+  list-style: none; /* Remove bullets */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 0;
+  background-color: #0044cc;
+}
+
+.navMenu li {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.navMenu a:link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navMenu a:visited {
+  color: #ddd;
+}
+
+.navMenu a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.navMenu a:active {
+  color: #ff6600;
+}
+
+/* ===========================
+   Event List Styling
+   =========================== */
+.eventList {
+  list-style-type: square;
+  list-style-position: inside;
+  margin: 20px auto;
+  padding: 0;
+  width: 60%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.eventList li {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 18px;
+}
