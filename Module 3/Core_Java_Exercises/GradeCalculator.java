@@ -22,7 +22,7 @@ public class GradeCalculator {
         } else {
             System.out.println("Invalid marks entered.");
             scanner.close();
-            return;  // Exit the program early
+            return;  
         }
 
         System.out.println("Grade: " + grade);
