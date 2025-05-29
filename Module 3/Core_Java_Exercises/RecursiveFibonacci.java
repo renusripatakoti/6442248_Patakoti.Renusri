@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class RecursiveFibonacci {
-
-    // Recursive method to find the nth Fibonacci number
     public static int fibonacci(int n) {
         if (n <= 1)
             return n;
