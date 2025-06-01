@@ -1,4 +1,4 @@
-// Custom exception class
+import java.util.Scanner;
 class InvalidAgeException extends Exception {
     public InvalidAgeException(String message) {
         super(message);
@@ -7,7 +7,7 @@ class InvalidAgeException extends Exception {
 
 public class AgeChecker {
     public static void main(String[] args) {
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
